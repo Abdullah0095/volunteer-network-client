@@ -5,7 +5,7 @@ const Home = () => {
     return (
         <div>
             <Header/>
-            <h1 style={{textAlign: 'center'}}>Hello I am home component</h1>
+            <h1 style={{textAlign: 'center'}}>I GROW BY HELPING PEOPLE IN NEED</h1>
         </div>
     );
 };
