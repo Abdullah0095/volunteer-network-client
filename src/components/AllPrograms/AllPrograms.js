@@ -1,22 +1,27 @@
 import React from 'react';
 import { Button, Card } from 'react-bootstrap';
+import { useHistory } from 'react-router-dom';
+
 
 const AllPrograms = (props) => {
-    console.log(props)
+    // console.log(props)
+    
+    const history = useHistory()
+
+
+
+    const handleProgram = () => {
+        history.push('/registration')
+    }
     return (
         <div>
-            {/* <h2>{props.program.topic}.</h2> */}
-            {/* <p>{props.program.id}</p> */}
-            {/* <img height="200px" src={props.program.url} /> */}
-
-
-
+            
             <Card style={{ width: '18rem',float: 'left', margin: '10px'}}>
                 <Card.Img variant="top" src={props.program.url}/>
-                <Button variant="dark">{props.program.topic}.</Button>
-                {/* <Card.Body>
-                    
-                </Card.Body> */}
+                
+
+                <Button onClick={handleProgram} variant="dark">{props.program.topic}. {props.program.id}</Button>
+                
             </Card>
         </div>
     );

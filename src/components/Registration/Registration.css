@@ -1,0 +1,20 @@
+.logo img{
+    width: 205px;
+    height: 60px;
+    
+}
+
+.logo{
+    margin-left: 250px;
+    margin-top: 20px;
+}
+
+.form{
+    text-align: center;
+    border: 1px solid gray;
+    height: 300px;
+    width: 300px;
+    margin-left: 450px;
+    margin-top: 30px;
+    padding: 20px 0px;
+}
