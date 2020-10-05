@@ -8,7 +8,7 @@ import './Header.css';
 const Header = () => {
 
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
-    console.log(loggedInUser)
+   
 
     return (
         <div className="header">
@@ -37,7 +37,7 @@ const Header = () => {
                   
               </li>
               <li>
-              <Link to="/login"><Button variant="dark">Admin</Button></Link>
+              <Link to="/volunteer"><Button variant="dark">Admin</Button></Link>
               </li>
           </ul>
 

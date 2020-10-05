@@ -4,6 +4,7 @@ import { UserContext } from '../../App';
 import Header from '../Header/Header';
 import SelectedAllTopic from '../SelectedAllTopic/SelectedAllTopic';
 
+
 const SelectedTopic = () => {
     const [programs, setPrograms] = useState([]);
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
@@ -20,16 +21,11 @@ const SelectedTopic = () => {
             
         
         {
-            programs.map(program => <SelectedAllTopic program={program}></SelectedAllTopic>
-            // <div style={{float: 'left', margin: '10px'}}>
-            //     <li>
-            //     <h3>{program.topic}</h3>
-            //     <img width="400px" src={program.url} alt=""/>
-                
-            // </li>
-            // </div>
-            )
+            programs.map(program => <SelectedAllTopic program={program}></SelectedAllTopic>)
+            
+            
         }
+        
         
 
         </div>

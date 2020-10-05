@@ -13,6 +13,7 @@ import NoMatch from "./components/NoMatch/NoMatch";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import Registration from "./components/Registration/Registration";
 import SelectedTopic from "./components/SelectedTopic/SelectedTopic";
+import Volunteer from "./components/Volunteer/Volunteer";
 import VolunteerList from "./components/VolunteerList/VolunteerList";
 
 
@@ -32,6 +33,9 @@ function App() {
         </Route>
         <Route path="/login">
             <Login></Login>
+        </Route>
+        <Route path="/volunteer">
+            <Volunteer></Volunteer>
         </Route>
         
         <PrivateRoute path="/registration/:id">
