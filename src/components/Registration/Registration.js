@@ -18,13 +18,29 @@ const Registration = () => {
 
   const topicDetails = taskData.filter(task => task.id == id)
   const { topic } = topicDetails[0];
+  const {url} = topicDetails[0];
 
 
   const { register, handleSubmit } = useForm();
-  const onSubmit = data => console.log(data);
+  // const onSubmit = data => console.log(data);
 
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
-  console.log(loggedInUser)
+ 
+
+  const handleRegistration = (id) => {
+      const topicList = {...loggedInUser, topic, url};
+      console.log(topicList)
+      fetch('http://localhost:4000/addList', {
+          method: 'POST',
+          headers: {'Content-Type' : 'application/json'},
+          body: JSON.stringify(topicList)
+      })
+      .then(res => res.json())
+      .then(data => {
+        console.log(data);
+      })
+      
+  }
 
 
   return (
@@ -36,7 +52,7 @@ const Registration = () => {
 
 
       <div className="form">
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form >
 
           <input type="text" size="30" value={loggedInUser.name} /> <br /> <br />
 
@@ -49,7 +65,7 @@ const Registration = () => {
             id="date"
             label=""
             type="date"
-            defaultValue=" "
+            defaultValue="2020-10-06"
 
             InputLabelProps={{
               shrink: true,
@@ -60,8 +76,8 @@ const Registration = () => {
 
           <input type="text" size="30" placeholder="description" id="" />  <br /> <br />
           <input type="text" size="30" value={topic} /> <br/> <br/>
+          <Link to='/list'><Button onClick={handleRegistration} style={{width: '250px'}} variant="primary">Submit</Button></Link>
           
-          <Button style={{width: '250px'}} variant="primary">Submit</Button>
         </form>
       </div>
 
