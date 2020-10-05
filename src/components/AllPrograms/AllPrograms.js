@@ -1,17 +1,17 @@
 import React from 'react';
 import { Button, Card } from 'react-bootstrap';
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 
 const AllPrograms = (props) => {
     // console.log(props)
     
-    const history = useHistory()
+    // const history = useHistory()
 
 
 
     const handleProgram = () => {
-        history.push('/registration')
+        // history.push('/registration')
     }
     return (
         <div>
@@ -20,7 +20,7 @@ const AllPrograms = (props) => {
                 <Card.Img variant="top" src={props.program.url}/>
                 
 
-                <Button onClick={handleProgram} variant="dark">{props.program.topic}. {props.program.id}</Button>
+                <Link to={`/registration/${props.program.id}`}><Button onClick={handleProgram} variant="dark">{props.program.topic}. {props.program.id}</Button></Link>
                 
             </Card>
         </div>

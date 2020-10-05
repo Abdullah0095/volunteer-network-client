@@ -32,7 +32,7 @@ function App() {
             <Login></Login>
         </Route>
         
-        <PrivateRoute path="/registration">
+        <PrivateRoute path="/registration/:id">
               <Registration></Registration>
         </PrivateRoute>
         <Route exact path="/">
