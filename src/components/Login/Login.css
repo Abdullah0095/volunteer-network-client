@@ -1,0 +1,22 @@
+.page-decoration{
+        text-align: center;
+        border: 1px solid gray;
+        height: 300px;
+        width: 400px;
+        margin: auto;
+        margin-top: 70px;
+        padding: 70px;
+}
+.logo img{
+    width: 50px;
+    margin-left: 300px;
+}
+.login-button{
+    /* border: 1px solid gray; */
+    border-radius: 5px;
+    color: white;
+    
+}
+.login-button img{
+    width: 30px;
+}

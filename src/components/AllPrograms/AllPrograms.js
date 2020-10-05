@@ -14,7 +14,7 @@ const AllPrograms = (props) => {
         // history.push('/registration')
     }
     return (
-        <div>
+        <div style={{marginLeft: '60px', marginTop: '20px'}}>
             
             <Card style={{ width: '18rem',float: 'left', margin: '10px'}}>
                 <Card.Img variant="top" src={props.program.url}/>

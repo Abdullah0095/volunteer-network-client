@@ -8,22 +8,23 @@ const Header = () => {
     return (
         <div className="header">
             <nav className="nav">
+            <ul style={{marginRight: '50px'}}>
          
               <li><Link to="/home"><img className="logo" src={logo} alt=""/></Link> </li>
 
-            <ul style={{marginLeft: '300px'}}>
+            
               
               <li>
-                  <Link to="/home">Home</Link>
+                  <Link to="/">Home</Link>
               </li>
               <li>
-                  <Link to="/login">Donation</Link>
+                  <Link to="/">Donation</Link>
               </li>
               <li>
-                  <Link to="/login">Events</Link>
+                  <Link to="/">Events</Link>
               </li>
               <li>
-                  <Link to="/login">Blog</Link>
+                  <Link to="/">Blog</Link>
               </li>
               <li>
                   

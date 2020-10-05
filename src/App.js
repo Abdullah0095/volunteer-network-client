@@ -12,6 +12,8 @@ import Login from "./components/Login/Login";
 import NoMatch from "./components/NoMatch/NoMatch";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import Registration from "./components/Registration/Registration";
+import SelectedTopic from "./components/SelectedTopic/SelectedTopic";
+import VolunteerList from "./components/VolunteerList/VolunteerList";
 
 
 export const UserContext = createContext();
@@ -35,6 +37,12 @@ function App() {
         <PrivateRoute path="/registration/:id">
               <Registration></Registration>
         </PrivateRoute>
+        <Route path="/list">
+            <SelectedTopic></SelectedTopic>
+        </Route>
+        <Route path="/volunteer">
+            <VolunteerList/>
+        </Route>
         <Route exact path="/">
           <Home />
         </Route>
