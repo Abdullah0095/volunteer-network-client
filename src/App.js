@@ -8,14 +8,10 @@ import {
 import './App.css';
 import Home from "./components/Home/Home";
 import Login from "./components/Login/Login";
-
 import NoMatch from "./components/NoMatch/NoMatch";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import Registration from "./components/Registration/Registration";
 import SelectedTopic from "./components/SelectedTopic/SelectedTopic";
-import Volunteer from "./components/Volunteer/Volunteer";
-import VolunteerList from "./components/VolunteerList/VolunteerList";
-
 
 export const UserContext = createContext();
 
@@ -34,9 +30,7 @@ function App() {
         <Route path="/login">
             <Login></Login>
         </Route>
-        <Route path="/volunteer">
-            <Volunteer></Volunteer>
-        </Route>
+        
         
         <PrivateRoute path="/registration/:id">
               <Registration></Registration>
@@ -44,9 +38,7 @@ function App() {
         <Route path="/list">
             <SelectedTopic></SelectedTopic>
         </Route>
-        <Route path="/volunteer">
-            <VolunteerList/>
-        </Route>
+        
         <Route exact path="/">
           <Home />
         </Route>
